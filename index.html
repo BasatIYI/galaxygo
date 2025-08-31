@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Galaxy Go</title>
+    <script>
+      window.onload = function () {
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+        var url = "";
+
+        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+          url = "https://play.google.com/store/apps/details?id=com.iyigamesmete.GalaxyGo&pli=1";
+        } else if (/android/i.test(userAgent)) {
+          url = "https://apps.apple.com/tr/app/galaxy-go/id1242012527?l";
+        } else {
+          url = "https://www.iyistudios.com"; // Masaüstü veya tanımsız cihazlar için
+        }
+
+        window.location.replace(url);
+      };
+    </script>
+  </head>
+  <body>
+    <p>Galaxy Go - Redirecting App Store or Google Play Store</p>
+  </body>
+</html>
